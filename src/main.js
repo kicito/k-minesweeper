@@ -3,6 +3,7 @@ import App from './App.vue';
 import store from './store';
 import './registerServiceWorker';
 import './plugins/element.js';
+import './globals/font-awesome.js';
 
 import '@styles/main.styl';
 
