@@ -1,14 +1,14 @@
 <template>
 	<el-main>
 		<div>this is main</div>
-		<GameBoard/>
+		<mine-sweeper/>
 	</el-main>
 </template>
 
 <script>
-import GameBoard from '@components/GameBoard';
+import MineSweeper from '@components/Game';
 export default {
-	name: 'main',
-	components: { GameBoard },
+	name: 'the-main',
+	components: { MineSweeper },
 };
 </script>

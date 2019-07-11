@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-    configureWebpack: {
+	configureWebpack: {
 		resolve: {
 			alias: {
 				'@components': path.resolve(__dirname, 'src/components/'),
@@ -9,15 +9,15 @@ module.exports = {
 		},
 	},
 
-    baseUrl: undefined,
-    outputDir: undefined,
-    assetsDir: 'src/assets',
-    runtimeCompiler: undefined,
-    productionSourceMap: undefined,
-    parallel: undefined,
-    css: undefined,
+	baseUrl: undefined,
+	outputDir: undefined,
+	assetsDir: 'src/assets',
+	runtimeCompiler: undefined,
+	productionSourceMap: undefined,
+	parallel: undefined,
+	css: undefined,
 
-    pwa: {
-      name: 'k\'s minesweeper'
-    }
+	pwa: {
+		name: "k's minesweeper",
+	},
 };

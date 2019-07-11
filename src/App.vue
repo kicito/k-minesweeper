@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <el-container direction="vertical">
-      <Header/>
-      <Main/>
+      <the-header/>
+      <the-main/>
     </el-container>
   </div>
 </template>
@@ -14,8 +14,8 @@ import Main from '@components/TheMain';
 export default {
 	name: 'app',
 	components: {
-		Header,
-		Main,
+		'the-header': Header,
+		'the-main': Main,
 	},
 };
 </script>

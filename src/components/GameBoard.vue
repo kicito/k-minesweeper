@@ -3,10 +3,18 @@
 		This is a board
 
 		<div class="game-container">
+			<div class="game-row">
+				r/c
+				<div v-for="c in cols" :key="c">
+					{{c}}
+				</div>
+			</div>
+
 			<div v-for="r in rows" :key="r">
 				<div class="game-row">
+					{{r}}
 					<div v-for="c in cols" :key="c">
-						<game-block/>
+						<game-block :icon="(c%2===0)?'blank':'bomb'" :row="r" :col="c" :onClicked="onBlockClicked(r,c)" />
 					</div>
 				</div>
 			</div>
@@ -24,6 +32,7 @@ export default {
 	props: {
 		rows: {
 			type: Number,
+			required: true,
 			default: 10,
 			validator: function(value) {
 				return Number.isInteger(value);
@@ -31,10 +40,15 @@ export default {
 		},
 		cols: {
 			type: Number,
+			required: true,
 			default: 8,
 			validator: function(value) {
 				return Number.isInteger(value);
 			},
+		},
+		onBlockClicked: {
+			type: Function,
+			required: true,
 		},
 	},
 	computed: {},
@@ -52,5 +66,5 @@ export default {
 	display flex
 	flex-direction row
 	flex-wrap nowrap
-	justify-content center
+	justify-content space-around
 </style>

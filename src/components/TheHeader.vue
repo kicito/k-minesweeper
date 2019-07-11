@@ -1,5 +1,5 @@
 <template>
-	<el-header>
+	<el-header class="header">
 		<h1>
 			K's MineSweeper
 
@@ -9,9 +9,17 @@
 
 <script>
 export default {
-	name: 'header',
+	name: 'the-header',
 	data() {
 		return {};
 	},
 };
 </script>
+
+<style lang="stylus" scoped>
+@import '~@styles/variables.styl'
+
+header
+	background primary-color
+	color white
+</style>
